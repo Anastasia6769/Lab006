@@ -72,21 +72,39 @@
 //     }
 // }
 //Шаг 12. Метод внутри метода
-Console.WriteLine();
-Console.WriteLine("Методы вызывают методы");
-PrintNumberInfo(7);
-PrintNumberInfo(10);
-PrintNumberInfo(15);
-bool IsEven(int number) {
-return number % 2 == 0;
+// Console.WriteLine();
+// Console.WriteLine("Методы вызывают методы");
+// PrintNumberInfo(7);
+// PrintNumberInfo(10);
+// PrintNumberInfo(15);
+// bool IsEven(int number) {
+// return number % 2 == 0;
+// }
+// void PrintNumberInfo(int number) {
+// string parity = IsEven(number) ? "чётное" : "нечётное";
+// Console.WriteLine($"{number} — {parity} число");
+// }
+// //Шаг 13. Комбинируем с циклом из ПР5
+// Console.WriteLine();
+// Console.WriteLine("Методы + цикл");
+// for (int i = 1; i <= 5; i++) {
+// PrintNumberInfo(i);
+// }
+//Самостоятельные задания
+//Задание 1. Конвертер единиц ★
+double MetersToFeet(double meters)
+{
+    return meters * 3.28084;
 }
-void PrintNumberInfo(int number) {
-string parity = IsEven(number) ? "чётное" : "нечётное";
-Console.WriteLine($"{number} — {parity} число");
+
+double CelsiusToFahrenheit(double celsius)
+{
+    return celsius * 9 / 5 + 32;
 }
-//Шаг 13. Комбинируем с циклом из ПР5
-Console.WriteLine();
-Console.WriteLine("Методы + цикл");
-for (int i = 1; i <= 5; i++) {
-PrintNumberInfo(i);
-}
+
+Console.WriteLine("2 метра = " + MetersToFeet(2));
+Console.WriteLine("5 метров = " + MetersToFeet(5));
+
+Console.WriteLine("20 градусов = " + CelsiusToFahrenheit(20));
+Console.WriteLine("30 градусов = " + CelsiusToFahrenheit(30));
+
